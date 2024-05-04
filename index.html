@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arduino Project</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="container">
+    <h1>Arduino Car</h1>
+
+    <section>
+      <svg style="max-width: 200px; display: block; margin: 0 auto;" "http://www.w3.org/2000/svg" viewBox="0 0 52 25" fill="none" data-inject-url="https://cdn.arduino.cc/header-footer/prod/assets/headerLogo-arduino.svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M51.25 12.5C51.25 5.60219 45.5773 0 38.6242 0C37.984 0 37.3261 0.0364964 36.6859 0.145985C31.2799 0.930657 27.6522 4.92701 25.625 7.9927C23.5978 4.92701 19.9701 0.930657 14.5641 0.145985C13.9239 0.0547445 13.266 0 12.6258 0C5.65493 0 0 5.60219 0 12.5C0 19.3978 5.67271 25 12.6258 25C13.266 25 13.9239 24.9635 14.5819 24.854C19.9879 24.0511 23.6155 20.0547 25.6428 16.9891C27.67 20.0547 31.2977 24.0511 36.7037 24.854C37.3439 24.9453 38.0018 25 38.6598 25C45.5773 25 51.25 19.3978 51.25 12.5ZM13.9416 20.4744C13.4971 20.5474 13.0525 20.5657 12.6079 20.5657C8.01996 20.5657 4.30336 16.9343 4.30336 12.5C4.30336 8.04744 8.03774 4.4343 12.6257 4.4343C13.0703 4.4343 13.5148 4.4708 13.9594 4.52554C19.0631 5.27372 22.1751 10.4379 23.242 12.5C22.1573 14.5803 19.0275 19.7263 13.9416 20.4744ZM37.2905 4.52554C32.1868 5.27372 29.057 10.4379 28.0079 12.5C29.057 14.562 32.1868 19.7263 37.2905 20.4744C37.735 20.5292 38.1796 20.5657 38.6242 20.5657C43.1944 20.5657 46.9287 16.9525 46.9287 12.5C46.9287 8.06569 43.2121 4.4343 38.6242 4.4343C38.1796 4.4343 37.735 4.4708 37.2905 4.52554ZM9.06449 11.161H16.7004V13.5642H9.06449V11.161ZM42.1479 13.5817H39.5728V16.1077H37.1049V13.5817H34.5298V11.161H37.1049V8.63499H39.5728V11.161H42.1479V13.5817Z" fill="currentColor"></path>
+      </svg>
+      <h2>Project Description</h2>
+      <p>This is a 4-wheel car controlled by a joystick. Uses DC motors for each wheel.</p>
+    </section>
+
+
+    <section>
+      <hr>
+      <ul style="list-style-type: none;">
+        <li><i class="fa fa-code"></i><strong> Language(s): </strong>Arduino</li>
+        <li><strong></strong></li>
+        <li><i class="fa fa-balance-scale"></i><strong> License: </strong>Mozilla Public License Version 2.0 <a target="_blank" href="https://choosealicense.com">(<i class="fa-solid fa-question"></i>)</a></li>
+        <li><i class="fa-brands fa-github"></i><strong> Repository: </strong><a href="" target="_blank">https://github.com</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Select Code Snippets</h2>
+      <div class="code-snippet">
+        <pre><code>void setup() 
+{
+  setupMotors();
+  setupInputs();
+}</code></pre>
+    <p><strong>Description: </strong>This gives the example code for the setup function. What it is doing is calling the setupMotors, which define what inputs each motor is, and the setupInputs, which set the inputs for the joystick.</p>
+      </div>
+
+      <div class="code-snippet">
+        <pre><code>const int midPoint = 512; // midpoint of the joystick, resting place.</code></pre>
+    <p><strong>Description: </strong>Sets a variable for the mid-point of the joystick, so we can check if the joystick is at rest or it's middle position</p>
+      </div>
+
+      <div class="code-snippet">
+        <pre><code>void setupMotors() {
+            // Motor 1
+            pinMode(ENB1, OUTPUT);
+            pinMode(In4, OUTPUT);
+            pinMode(In3, OUTPUT);
+        }</code></pre>
+            <p><strong>Description: </strong> This is a bit of the setupMotors function, basically in the given code it sets the inputs for the first motor. There is more code not shown that does a similar process for the remaing three motors.</p>
+      </div>
+    </section>
+
+
+  </div>
+</body>
+</html>
